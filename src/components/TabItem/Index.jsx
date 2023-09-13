@@ -5,7 +5,7 @@ import { WARNA_UTAMA, WARNA_DISABLE } from '../../utils/constant'
 
 const TabItem = ({ isFocused, onPress, onLongPress, label }) => {
     const Icon = () => {
-        if (label === 'Home') return isFocused ? <IconAkunActive></IconAkunActive> : <IconHome></IconHome>
+        if (label === 'Home') return isFocused ? <IconHomeActive></IconHomeActive> : <IconHome></IconHome>
         if (label === 'Pesanan') return isFocused ? <IconPesananActive></IconPesananActive> : <IconPesanan></IconPesanan>
         if (label === 'Akun') return isFocused ? <IconAkunActive></IconAkunActive> : <IconAkun></IconAkun>
 
