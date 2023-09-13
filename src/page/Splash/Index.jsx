@@ -5,10 +5,13 @@ import { Logo, SplashScrenn } from '../../assets/img/Index'
 
 const Splash = ({ navigation }) => {
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       navigation.replace('MainApp');
-    }, 3000)
-  }, { navigation });
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, [navigation]);
+
 
   return (
     <ImageBackground source={SplashScrenn} style={styles.background}>
